@@ -1,6 +1,7 @@
 
 package bgu.spl.net;
 
+import javax.xml.crypto.Data;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -40,7 +41,13 @@ public class Database {
 	public static Database getInstance() {
 		return SingleHolder.instance;
 	}
-	
+
+	public static void main(String[] args) {
+		Database db = Database.getInstance();
+		db.initialize("C:\\Users\\odedg\\Desktop\\aaa.txt");
+		int x =0;
+	}
+
 	/**
 	 * loades the courses from the file path specified 
 	 * into the Database, returns true if successful.
@@ -52,6 +59,8 @@ public class Database {
 			String line = br.readLine();
 			while(line!=null)
 			{
+				while(line =="")
+					line = br.readLine();
 				int courseNum = Integer.parseInt(line.substring(0,line.indexOf('|')));
 				line = line.substring(line.indexOf('|')+1);
 				String courseName =line.substring(0,line.indexOf('|'));
@@ -62,9 +71,12 @@ public class Database {
 				kdamCourses = Arrays.asList(temparr);
 				List<Integer> realKdamCourses = new ArrayList<>();
 				for(String s : kdamCourses)
-					realKdamCourses.add(Integer.parseInt(s));
+				{
+					if(!s.equals(""))
+						realKdamCourses.add(Integer.parseInt(s));
+				}
 				line = line.substring(line.indexOf('|')+1);
-				int maxStudents = Integer.parseInt(line.substring(0,line.indexOf('|')));
+				int maxStudents = Integer.parseInt(line);
 				this.courses.put(courseNum, new Course(courseNum,courseName,realKdamCourses,maxStudents));
 				line = br.readLine();
 			}

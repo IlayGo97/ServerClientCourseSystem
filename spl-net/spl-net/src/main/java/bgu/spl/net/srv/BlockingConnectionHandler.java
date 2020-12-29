@@ -47,6 +47,7 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
 
     }
 
+
     @Override
     public void close() throws IOException {
         connected = false;
