@@ -1,4 +1,4 @@
-package splnet;
+package bgu.spl.net;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,5 +1,5 @@
 
-package splnet;
+package bgu.spl.net;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
