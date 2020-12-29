@@ -1,6 +1,9 @@
 
 package splnet;
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 /**
  * Passive object representing the Database where all courses and users are stored.
  * <p>
@@ -11,19 +14,24 @@ package splnet;
  */
 public class Database {
 
+	ConcurrentHashMap<Integer,Course> courses;
+	ConcurrentHashMap<String,User> users;
+
 	private static class SingleHolder{
 		private static Database instance = new Database();
 	}
 	//to prevent user from creating new Database
 	private Database() {
-		private static
+		this.courses = new ConcurrentHashMap<>();
+		this.users = new ConcurrentHashMap<>();
 	}
+
 
 	/**
 	 * Retrieves the single instance of this class.
 	 */
 	public static Database getInstance() {
-		return singleton;
+		return SingleHolder.instance;
 	}
 	
 	/**
