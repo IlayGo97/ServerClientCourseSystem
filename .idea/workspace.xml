@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c0b41bd-3ff1-49fe-8341-da190d179e35" name="Default Changelist" comment="" />
+    <list default="true" id="049eb50b-f31b-493c-8486-18f744a811e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/SPL_ASS3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/SPL_ASS32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPL-ASS3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spl-net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spl-net/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/spl-net/Database.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,25 +20,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1mKz0uhw3pu2pzKJXEABgho3JR3" />
+  <component name="ProjectId" id="1mKzteVd2vub7KmSD6iiUYuCECQ" />
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9c0b41bd-3ff1-49fe-8341-da190d179e35" name="Default Changelist" comment="" />
-      <created>1609256852876</created>
+      <changelist id="049eb50b-f31b-493c-8486-18f744a811e8" name="Default Changelist" comment="" />
+      <created>1609257286227</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609256852876</updated>
+      <updated>1609257286227</updated>
     </task>
     <servers />
   </component>

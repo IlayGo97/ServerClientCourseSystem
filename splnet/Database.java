@@ -1,5 +1,5 @@
 
-
+package splnet;
 
 /**
  * Passive object representing the Database where all courses and users are stored.
@@ -11,10 +11,12 @@
  */
 public class Database {
 
-
+	private static class SingleHolder{
+		private static Database instance = new Database();
+	}
 	//to prevent user from creating new Database
 	private Database() {
-		// TODO: implement
+		private static
 	}
 
 	/**

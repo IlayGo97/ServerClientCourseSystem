@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="SPL-ASS3">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/spl-net.zip!/" />
       <root url="jar://$PROJECT_DIR$/Boost_Echo_Client.zip!/" />
+      <root url="jar://$PROJECT_DIR$/spl-net.zip!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
