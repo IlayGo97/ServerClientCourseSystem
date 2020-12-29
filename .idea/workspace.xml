@@ -21,9 +21,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mKzteVd2vub7KmSD6iiUYuCECQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -36,5 +42,15 @@
       <updated>1609257286227</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="150" key="FileChooserDialogImpl" timestamp="1609259899429">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="150" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1609259899429" />
+    <state x="439" y="137" width="745" height="590" key="NewModule_or_Project.wizard" timestamp="1609259919899">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="439" y="137" width="745" height="590" key="NewModule_or_Project.wizard/0.0.1536.864@0.0.1536.864" timestamp="1609259919899" />
   </component>
 </project>
