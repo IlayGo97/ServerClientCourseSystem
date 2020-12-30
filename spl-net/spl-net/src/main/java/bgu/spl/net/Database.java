@@ -44,7 +44,7 @@ public class Database {
 
 	public static void main(String[] args) {
 		Database db = Database.getInstance();
-		db.initialize("C:\\Users\\odedg\\Desktop\\aaa.txt");
+		//db.initialize("C:\\Users\\odedg\\Desktop\\aaa.txt");
 		int x =0;
 	}
 
