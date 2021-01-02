@@ -175,11 +175,13 @@ public class CommandEncoderDecoder implements MessageEncoderDecoder<String> {
 
             byte[] opCodeInBytes = opCodeToByteArray(13);
             byte[] msgOpCodeInBytes = opCodeToByteArray(Integer.parseInt(words[1]));
+            byte[] z = new byte[1];
+            z[0] = 0;
             List<byte[]> l = new LinkedList<>();
             l.add(opCodeInBytes);
             l.add(msgOpCodeInBytes);
+            l.add(z);
             return combineByteArrays(l);
-
         }
         else
         {
