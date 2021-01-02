@@ -22,6 +22,7 @@
     <list default="true" id="77c3599b-a085-41d6-b026-80b7bebb1bd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/bgu/spl/net/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/bgu/spl/net/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/bgu/spl/net/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/bgu/spl/net/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/bgu/spl/net/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/bgu/spl/net/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/bgu/spl/net/impl/Courses/CommandEncoderDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/bgu/spl/net/impl/Courses/CommandEncoderDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/bgu/spl/net/impl/Courses/CommandProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/bgu/spl/net/impl/Courses/CommandProtocol.java" afterDir="false" />
@@ -58,9 +59,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.CommandEncoderDecoder">
+  <component name="RunManager" selected="Application.CommandProtocol">
     <configuration name="CommandEncoderDecoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.Courses.CommandEncoderDecoder" />
+      <module name="spl-net" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.net.impl.Courses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProtocol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.Courses.CommandProtocol" />
       <module name="spl-net" />
       <extension name="coverage">
         <pattern>
@@ -87,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CommandProtocol" />
         <item itemvalue="Application.CommandEncoderDecoder" />
         <item itemvalue="Application.Database" />
       </list>
@@ -140,45 +155,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609260809223" />
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1609523207230">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1609598412836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609598412836" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207230" />
-    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1609523207230">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1609598412836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609598412836" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207230" />
-    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1609523207230">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1609598412836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086291" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609598412836" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207230" />
-    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1609523207230">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1609598412836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609598412836" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207230" />
-    <state width="1877" height="298" key="GridCell.Tab.1.bottom" timestamp="1609523207231">
+    <state width="1877" height="298" key="GridCell.Tab.1.bottom" timestamp="1609597966420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="298" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609597966420" />
     <state width="1877" height="298" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207231" />
-    <state width="1877" height="298" key="GridCell.Tab.1.center" timestamp="1609523207231">
+    <state width="1877" height="298" key="GridCell.Tab.1.center" timestamp="1609597966420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="298" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609597966420" />
     <state width="1877" height="298" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207231" />
-    <state width="1877" height="298" key="GridCell.Tab.1.left" timestamp="1609523207231">
+    <state width="1877" height="298" key="GridCell.Tab.1.left" timestamp="1609597966420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="298" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609597966420" />
     <state width="1877" height="298" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207231" />
-    <state width="1877" height="298" key="GridCell.Tab.1.right" timestamp="1609523207231">
+    <state width="1877" height="298" key="GridCell.Tab.1.right" timestamp="1609597966420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609516086292" />
+    <state width="1877" height="298" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609597966420" />
     <state width="1877" height="298" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609523207231" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1609590294796">
       <screen x="0" y="0" width="1920" height="1040" />

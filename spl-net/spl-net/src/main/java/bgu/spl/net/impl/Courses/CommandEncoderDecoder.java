@@ -130,13 +130,6 @@ public class CommandEncoderDecoder implements MessageEncoderDecoder<String> {
         return output;
     }
 
-    public static void main(String args[]) {
-        CommandEncoderDecoder c  = new CommandEncoderDecoder();
-        byte[] ans = c.encode("ACK 2 This Is A Message biatch");
-        System.out.println(c.byteTostring(ans, 0));
-
-    }
-
 
     private void pushByte(byte nextByte) {
         if (len >= bytes.length) {

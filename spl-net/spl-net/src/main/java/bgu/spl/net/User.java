@@ -17,6 +17,11 @@ public class User {
         this.password = password;
         registeredCourses = new CopyOnWriteArrayList<>();
     }
+
+    public String toString()
+    {
+        return username;
+    }
     public void makeAdmin()
     {
         this.isAdmin=true;

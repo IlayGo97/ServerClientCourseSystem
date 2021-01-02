@@ -5,6 +5,7 @@ import bgu.spl.net.Database;
 import bgu.spl.net.User;
 import bgu.spl.net.api.MessagingProtocol;
 
+import javax.xml.crypto.Data;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -107,6 +108,7 @@ public class CommandProtocol implements MessagingProtocol<String> {
             return "ERROR 1";
         User toAdd = new User(username, password);
         toAdd.makeAdmin();
+        u.put(username,toAdd);
         return "ACK 1 Admin registered succesfully";
     }
     private String STUDENTREG(String username, String password)
@@ -115,7 +117,8 @@ public class CommandProtocol implements MessagingProtocol<String> {
         if(u.containsKey(username))
             return "ERROR 2";
         User toAdd = new User(username, password);
-        return "ACK 2 user registered succesfully";
+        u.put(username,toAdd);
+        return "ACK 2 Student registered succesfully";
     }
     private String LOGIN(String username, String password)
     {
@@ -124,7 +127,10 @@ public class CommandProtocol implements MessagingProtocol<String> {
             return "ERROR 3";
         User currUser = u.get(username);
         if(currUser.verifyPassword(password))
+        {
+            loggedUser = currUser;
             return "ACK 3";
+        }
         else
             return "ERROR 3";
     }
@@ -141,7 +147,7 @@ public class CommandProtocol implements MessagingProtocol<String> {
     private String COURSEREG(int courseNum)
     {
         // checking if user is logged and if course exists
-        if(loggedUser == null || !db.getCourses().containsKey(courseNum))
+        if(loggedUser == null || !db.getCourses().containsKey(courseNum) || loggedUser.isAdmin())
             return "ERROR 5";
         //checking if students has all kdam courses
         Course currCourse = db.getCourses().get(courseNum);
@@ -151,8 +157,10 @@ public class CommandProtocol implements MessagingProtocol<String> {
                 return "ERROR 5";
         }
         //checking slots in course
-        if(currCourse.getRegisteredStudents().size()<=currCourse.getMaxStudents())
+        if(currCourse.getRegisteredStudents().size()<currCourse.getMaxStudents())
         {
+            currCourse.getRegisteredStudents().add(loggedUser);
+            loggedUser.getRegisteredCourses().add(currCourse.getCourseNumber());
             return "ACK 5";
         }
         else
@@ -173,7 +181,8 @@ public class CommandProtocol implements MessagingProtocol<String> {
             return "ERROR 7";
         Course currCourse = db.getCourses().get(courseNum);
         String CourseNameAndNum = "Course: ("+currCourse.getCourseNumber()+") "+currCourse.getCourseName();
-        String SeatsAvailable = "Seats Available: "+currCourse.getRegisteredStudents().size()+"/"+currCourse.getMaxStudents();
+        int avSeats = (currCourse.getMaxStudents()-currCourse.getRegisteredStudents().size());
+        String SeatsAvailable = "Seats Available: "+avSeats+"/"+currCourse.getMaxStudents();
         String StudentsRegistered="Students Registered: "+currCourse.getRegisteredStudents().toString().replaceAll(" ","");
         return "ACK 7 \n"+CourseNameAndNum+"\n"+SeatsAvailable+"\n"+StudentsRegistered;
 
@@ -201,9 +210,10 @@ public class CommandProtocol implements MessagingProtocol<String> {
     }
     private String UNREGISTER(int courseNum)
     {
-        if(loggedUser == null || !loggedUser.getRegisteredCourses().contains(courseNum))
+        if(loggedUser == null || !loggedUser.getRegisteredCourses().contains(courseNum) || !db.getCourses().containsKey(courseNum))
             return "ERROR 10";
         loggedUser.getRegisteredCourses().remove(courseNum);
+        db.getCourses().get(courseNum).getRegisteredStudents().remove(loggedUser);
         return "ACK 10";
     }
     private String MYCOURSES()
@@ -211,6 +221,27 @@ public class CommandProtocol implements MessagingProtocol<String> {
         if(loggedUser == null)
             return "ERROR 11";
         return "ACK 11\n"+loggedUser.getRegisteredCourses().toString().replaceAll(" ","");
+    }
+    public static void main(String[] args)
+    {
+        CommandProtocol cp = new CommandProtocol();
+        Database db = Database.getInstance();
+        db.initialize("C:\\Users\\odedg\\Desktop\\Courses.txt");
+        System.out.println(cp.process("STUDENTREG odedgal 12387"));
+        System.out.println(cp.process("LOGIN odedgal 12387"));
+        System.out.println(cp.process("COURSEREG 1"));
+        System.out.println(cp.process("COURSEREG 2"));
+        System.out.println(cp.process("COURSEREG 3"));
+        System.out.println(cp.process("COURSEREG 342"));
+        //System.out.println(cp.process("UNREGISTER 3"));
+        System.out.println(cp.process("LOGOUT"));
+        System.out.println(cp.process("ADMINREG ilaygo 12387"));
+        System.out.println(cp.process("LOGIN ilaygo 12387"));
+        System.out.println(cp.process("KDAMCHECK 342"));
+        System.out.println(cp.process("COURSESTAT 342"));
+        System.out.println(cp.process("COURSESTAT 3"));
+        System.out.print("dfg");
+
     }
 
 }
