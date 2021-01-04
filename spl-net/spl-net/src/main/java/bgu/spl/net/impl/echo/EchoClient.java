@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class EchoClient {
 
-    public static void main(String[] args) throws IOException {
+   /* public static void main(String[] args) throws IOException {
 
         if (args.length == 0) {
             args = new String[]{"localhost", "hello"};
@@ -34,5 +34,5 @@ public class EchoClient {
             String line = in.readLine();
             System.out.println("message from server: " + line);
         }
-    }
+    }*/
 }

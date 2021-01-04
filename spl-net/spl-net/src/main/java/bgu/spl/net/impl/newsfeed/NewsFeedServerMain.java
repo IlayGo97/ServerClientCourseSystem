@@ -6,7 +6,7 @@ import bgu.spl.net.srv.Server;
 
 public class NewsFeedServerMain {
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         NewsFeed feed = new NewsFeed(); //one shared object
 
 // you can use any server... 
@@ -23,5 +23,5 @@ public class NewsFeedServerMain {
                 ObjectEncoderDecoder::new //message encoder decoder factory
         ).serve();
 
-    }
+    }*/
 }

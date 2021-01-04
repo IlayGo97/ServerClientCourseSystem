@@ -13,11 +13,12 @@ public class CommandProtocol implements MessagingProtocol<String> {
 
     Database db;
     User loggedUser;
-
+    Boolean shouldTerminate;
     public CommandProtocol()
     {
         this.db = Database.getInstance();
         loggedUser = null;
+        shouldTerminate = false;
     }
 
     @Override
@@ -98,7 +99,7 @@ public class CommandProtocol implements MessagingProtocol<String> {
 
     @Override
     public boolean shouldTerminate() {
-        return false;
+        return shouldTerminate;
     }
 
     private String ADMINREG(String username, String password)
@@ -141,6 +142,7 @@ public class CommandProtocol implements MessagingProtocol<String> {
         else
         {
             loggedUser = null;
+            shouldTerminate = true;
             return "ACK 4";
         }
     }
@@ -222,7 +224,7 @@ public class CommandProtocol implements MessagingProtocol<String> {
             return "ERROR 11";
         return "ACK 11\n"+loggedUser.getRegisteredCourses().toString().replaceAll(" ","");
     }
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         CommandProtocol cp = new CommandProtocol();
         Database db = Database.getInstance();
@@ -242,6 +244,6 @@ public class CommandProtocol implements MessagingProtocol<String> {
         System.out.println(cp.process("COURSESTAT 3"));
         System.out.print("dfg");
 
-    }
+    }*/
 
 }

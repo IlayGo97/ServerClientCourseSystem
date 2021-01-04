@@ -4,7 +4,7 @@ import bgu.spl.net.impl.rci.RCIClient;
 
 public class NewsFeedClientMain {
 
-    public static void main(String[] args) throws Exception {
+   /* public static void main(String[] args) throws Exception {
         if (args.length == 0) {
             args = new String[]{"127.0.0.1"};
         }
@@ -50,5 +50,5 @@ public class NewsFeedClientMain {
             c.send(new FetchNewsCommand("headlines"));
             System.out.println("third client received: " + c.receive());
         }
-    }
+    }*/
 }
