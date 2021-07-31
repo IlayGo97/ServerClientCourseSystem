@@ -1,2 +1,2 @@
 # SPL-ASS3
- מה אתה קורא את זה יא משועמם
+ Server and client for course registering system.
